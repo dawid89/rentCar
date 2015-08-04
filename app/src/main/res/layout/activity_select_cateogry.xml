@@ -1,137 +1,118 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="project.com.rentcar.ui.SelectCateogryActivity"
-    android:background="#ffffff"
-   >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/logo"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/logo2"
-        android:layout_alignParentTop="true"
-        android:paddingRight="50dp"
-        android:paddingLeft="50dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:textColor="#ffffff"
-        android:text="Select rent category:"
-        android:background="@drawable/custom_background"
-        android:id="@+id/textView"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:layout_below="@+id/logo"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/luxButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:background="@drawable/custom_background"
-        android:layout_alignParentBottom="false"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_alignParentTop="false"
-        android:layout_alignStart="@+id/textView"
-        android:textStyle="bold"
-        android:text="Luxuary"
-        android:layout_below="@+id/textView"
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/logo2"
+            android:gravity="center">
 
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="false"
-        android:enabled="false"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="10dp" />
-    <Button
-        android:id="@+id/ecoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:background="@drawable/custom_background"
-        android:textStyle="bold"
-        android:text="Economy"
-        android:gravity="center"
-        android:singleLine="false"
-        android:layout_below="@+id/textView"
-        android:layout_toRightOf="@+id/luxButton"
-        android:layout_toEndOf="@+id/luxButton"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp" />
-    <Button
-        android:id="@+id/busButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:background="@drawable/custom_background"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="70dp"
-        android:layout_alignLeft="@+id/luxButton"
-        android:layout_alignStart="@+id/luxButton"
-        android:textStyle="bold"
-        android:text="Bus"
-        android:singleLine="false"
-        android:gravity="center" />
-    <Button
-        android:id="@+id/truckButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Truck"
-        android:textColor="#ffffff"
-        android:background="@drawable/custom_background"
-        android:textStyle="bold"
-        android:layout_alignTop="@+id/busButton"
-        android:layout_alignLeft="@+id/ecoButton"
-        android:layout_alignStart="@+id/ecoButton" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:textColor="#ffffff"
-        android:text="More info"
-        android:background="@drawable/custom_background"
-        android:layout_below="@+id/busButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:height="25dp"
-        android:paddingLeft="100dp"
-        android:paddingRight="100dp"
-        android:id="@+id/textView2"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/mapButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Map"
-        android:textColor="#ffffff"
-        android:background="@drawable/custom_background"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/busButton"
-        android:layout_alignStart="@+id/busButton"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        android:layout_alignRight="@+id/busButton"
-        android:layout_alignEnd="@+id/busButton" />
-    <Button
-        android:id="@+id/infoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About"
-        android:textColor="#ffffff"
-        android:background="@drawable/custom_background"
-        android:textStyle="bold"
-        android:layout_alignTop="@+id/mapButton"
-        android:layout_alignLeft="@+id/truckButton"
-        android:layout_alignStart="@+id/truckButton" />
+        </ImageView>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Select rent category:"
+            android:background="@drawable/custom_background"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textSize="20dp" />
+    </LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Luxuary"
+            android:background="@drawable/custom_background"
+            android:textColor="#ffffff"
+            android:id="@+id/luxButton" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Economy"
+            android:background="@drawable/custom_background"
+            android:textColor="#ffffff"
+            android:id="@+id/ecoButton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bus"
+            android:background="@drawable/custom_background"
+            android:textColor="#ffffff"
+            android:id="@+id/busButton" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Truck"
+            android:background="@drawable/custom_background"
+            android:textColor="#ffffff"
+            android:id="@+id/truckButton" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="More info"
+            android:background="@drawable/custom_background"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Map"
+            android:background="@drawable/custom_background"
+            android:textColor="#ffffff"
+            android:id="@+id/mapButton" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="About"
+            android:background="@drawable/custom_background"
+            android:textColor="#ffffff"
+            android:id="@+id/aboutButton" />
+    </LinearLayout>
+
+</LinearLayout>
