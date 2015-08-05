@@ -13,7 +13,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/logo2"
-            android:gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
             android:layout_marginRight="50dp"
             android:layout_marginLeft="50dp">
 
@@ -32,7 +33,10 @@
             android:background="@drawable/custom_background"
             android:textColor="#ffffff"
             android:gravity="center"
-            android:textSize="20dp" />
+            android:textSize="22dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -47,7 +51,10 @@
             android:background="@drawable/custom_background"
             android:textColor="#ffffff"
             android:id="@+id/luxButton"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            android:textSize="15dp" />
 
         <Button
             android:layout_width="0dp"
@@ -58,7 +65,10 @@
             android:textColor="#ffffff"
             android:id="@+id/ecoButton"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:textSize="15dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -73,7 +83,10 @@
             android:background="@drawable/custom_background"
             android:textColor="#ffffff"
             android:id="@+id/busButton"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:textSize="15dp" />
 
         <Button
             android:layout_width="0dp"
@@ -84,7 +97,10 @@
             android:textColor="#ffffff"
             android:id="@+id/truckButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:textSize="15dp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -98,8 +114,11 @@
             android:background="@drawable/custom_background"
             android:textColor="#ffffff"
             android:gravity="center"
-            android:textSize="20dp"
-            android:layout_marginTop="30dp" />
+            android:textSize="22dp"
+            android:layout_marginTop="20dp"
+            android:textIsSelectable="false"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -114,7 +133,10 @@
             android:background="@drawable/custom_background"
             android:textColor="#ffffff"
             android:id="@+id/mapButton"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            android:textSize="15dp" />
 
         <Button
             android:layout_width="0dp"
@@ -125,7 +147,10 @@
             android:textColor="#ffffff"
             android:id="@+id/aboutButton"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:textSize="15dp" />
     </LinearLayout>
 
 </LinearLayout>
