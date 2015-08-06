@@ -4,15 +4,64 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import project.com.rentcar.R;
 
 public class SelectCateogryActivity extends ActionBarActivity {
+    private Button luxButton,ecoButton,busButton,truButton,mapButton,aboutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_cateogry);
+        luxButton = (Button) findViewById(R.id.luxButton);
+        ecoButton = (Button) findViewById(R.id.ecoButton);
+        busButton = (Button) findViewById(R.id.busButton);
+        truButton = (Button) findViewById(R.id.truckButton);
+        mapButton = (Button) findViewById(R.id.mapButton);
+        aboutButton = (Button) findViewById(R.id.aboutButton);
+
+        luxButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        ecoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        busButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        truButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
     }
 
     @Override
