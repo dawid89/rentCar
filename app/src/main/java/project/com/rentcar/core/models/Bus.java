@@ -8,6 +8,7 @@ public class Bus {
     private int busVin;
     private int busYear;
     private int busRegistration;
+    private int numberSeats;
 
     public Engine getEngine() {
         return engine;
@@ -65,6 +66,6 @@ public class Bus {
         this.busRegistration = busRegistration;
     }
 
-    private int numberSeats;
+
 
 }

@@ -9,6 +9,7 @@ public class Truck {
     private int truckYear;
     private int truckRegistration;
     private int wheelsNumber;
+    private int payloadTruck;
 
     public Engine getEngine() {
         return engine;
@@ -74,6 +75,6 @@ public class Truck {
         this.wheelsNumber = wheelsNumber;
     }
 
-    private int payloadTruck;
+
 
 }
