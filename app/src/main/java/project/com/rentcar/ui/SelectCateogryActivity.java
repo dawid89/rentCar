@@ -1,7 +1,7 @@
 package project.com.rentcar.ui;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,6 +11,7 @@ import project.com.rentcar.R;
 
 public class SelectCateogryActivity extends ActionBarActivity {
     private Button luxButton,ecoButton,busButton,truButton,mapButton,aboutButton;
+     
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class SelectCateogryActivity extends ActionBarActivity {
         truButton = (Button) findViewById(R.id.truckButton);
         mapButton = (Button) findViewById(R.id.mapButton);
         aboutButton = (Button) findViewById(R.id.aboutButton);
+
 
         luxButton.setOnClickListener(new View.OnClickListener() {
             @Override
