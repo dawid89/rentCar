@@ -1,11 +1,49 @@
 package project.com.rentcar.core.models;
 
 public class Vehicle {
+    private Engine engine;
     private String make;
     private String model;
+    private String color;
     private int vin;
     private int year;
     private int registration;
+    private int doorsNumber;
+    private int seatsNumber;
+
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getDoorsNumber() {
+        return doorsNumber;
+    }
+
+    public void setDoorsNumber(int doorsNumber) {
+        this.doorsNumber = doorsNumber;
+    }
+
+    public int getSeatsNumber() {
+        return seatsNumber;
+    }
+
+    public void setSeatsNumber(int seatsNumber) {
+        this.seatsNumber = seatsNumber;
+    }
+
 
     public String getMake() {
         return make;

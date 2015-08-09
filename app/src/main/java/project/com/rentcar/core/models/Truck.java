@@ -2,13 +2,21 @@ package project.com.rentcar.core.models;
 
 
 public class Truck {
-
+    private Engine engine;
     private String truckMake;
     private String truckModel;
     private int truckVin;
     private int truckYear;
     private int truckRegistration;
     private int wheelsNumber;
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
 
     public int getPayloadTruck() {
         return payloadTruck;

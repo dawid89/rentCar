@@ -2,11 +2,20 @@ package project.com.rentcar.core.models;
 
 
 public class Bus {
+    private Engine engine;
     private String busMake;
     private String busModel;
     private int busVin;
     private int busYear;
     private int busRegistration;
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
 
     public int getNumberSeats() {
         return numberSeats;
