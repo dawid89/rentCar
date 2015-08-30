@@ -6,12 +6,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 import project.com.rentcar.R;
+import project.com.rentcar.core.listAdapter.VehicleAdapter;
+import project.com.rentcar.core.models.Vehicle;
 
 public class SelectCateogryActivity extends ActionBarActivity {
     private Button luxButton,ecoButton,busButton,truButton,mapButton,aboutButton;
-     
+    ListView list;
+    VehicleAdapter adapter;
+    ArrayList<Vehicle> vehiclelist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +30,10 @@ public class SelectCateogryActivity extends ActionBarActivity {
         truButton = (Button) findViewById(R.id.truckButton);
         mapButton = (Button) findViewById(R.id.mapButton);
         aboutButton = (Button) findViewById(R.id.aboutButton);
+        ListView list = (ListView) findViewById(R.id.list_lv);
+        vehiclelist = new ArrayList<Vehicle>();
+      // "http://localhost:8080/RentCarServer/resources/luxury?limit=30&accessToken=1440831749586";
+
 
 
         luxButton.setOnClickListener(new View.OnClickListener() {
@@ -87,4 +98,5 @@ public class SelectCateogryActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
