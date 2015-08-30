@@ -23,12 +23,10 @@ public class VehicleAsynTask extends AsyncTask<String,Void,Boolean> {
     protected Boolean doInBackground(String... urls) {
         try {
 
-            //------------------>>
             HttpGet httppost = new HttpGet(urls[0]);
             HttpClient httpclient = new DefaultHttpClient();
             HttpResponse response = httpclient.execute(httppost);
 
-            // StatusLine stat = response.getStatusLine();
             int status = response.getStatusLine().getStatusCode();
 
             if (status == 200) {
@@ -46,7 +44,12 @@ public class VehicleAsynTask extends AsyncTask<String,Void,Boolean> {
 
                     vehicle.setMake(object.getString("Make"));
                     vehicle.setModel(object.getString("Model"));
+                    vehicle.setVin(object.getInt("Vin"));
                     vehicle.setYear(object.getInt("Year"));
+                    vehicle.setRegistration(object.getInt("Registration"));
+                    vehicle.setColor(object.getString("Color"));
+                    vehicle.setDoorsNumber(object.getInt("Doors Number"));
+                    vehicle.setSeatsNumber(object.getInt("Seats Number"));
 
 
 
