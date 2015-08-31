@@ -11,16 +11,6 @@ public class Vehicle {
     private int doorsNumber;
     private int seatsNumber;
 
-    public Runnable getGetImage() {
-        return getImage;
-    }
-
-    public void setGetImage(Runnable getImage) {
-        this.getImage = getImage;
-    }
-
-    public Runnable getImage;
-
 
     public Engine getEngine() {
         return engine;

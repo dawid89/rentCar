@@ -24,62 +24,64 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Vehicle"
-                android:textColor="#166CED"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:textColor="#ffffff"
+                 />
 
             <TextView
                 android:id="@+id/tvModel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="model"
-                android:textColor="#D64530"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textColor="#ffffff"
+                />
 
             <TextView
                 android:id="@+id/tvVin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#D64530"
-                android:text="vin"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textColor="#ffffff"
+                android:text="vin">
+
+            </TextView>
     <TextView
         android:id="@+id/tvRegistration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#D64530"
+        android:textColor="#ffffff"
         android:text="reg"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        />
      <TextView
         android:id="@+id/tvYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#D64530"
-        android:text="year"
-         android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textColor="#ffffff"
+        android:text="year">
+
+     </TextView>
     <TextView
         android:id="@+id/tvEngine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#D64530"
+        android:textColor="#ffffff"
         android:text="engine" />
     <TextView
         android:id="@+id/tvColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#D64530"
+        android:textColor="#ffffff"
         android:text="Color" />
     <TextView
         android:id="@+id/tvDoor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#D64530"
+        android:textColor="#ffffff"
         android:text="doorNumber" />
 
     <TextView
         android:id="@+id/tvSeat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#D64530"
+        android:textColor="#ffffff"
         android:text="seatNumber" />
 
  </LinearLayout>
