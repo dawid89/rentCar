@@ -1,6 +1,7 @@
 package project.com.rentcar.core.asyncTask;
 
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
 import org.apache.http.HttpEntity;
@@ -15,9 +16,26 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
+import project.com.rentcar.R;
+import project.com.rentcar.core.listAdapter.VehicleAdapter;
 import project.com.rentcar.core.models.Vehicle;
+import project.com.rentcar.ui.SelectCateogryActivity;
 
 public class VehicleAsynTask extends AsyncTask<String,Void,Boolean> {
+
+    SelectCateogryActivity vehiclelist = new SelectCateogryActivity();
+    ProgressDialog dialog;
+
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        dialog = new ProgressDialog(vehiclelist);
+        dialog.setMessage("Loading, please wait");
+        dialog.setTitle("Connecting server");
+        dialog.show();
+        dialog.setCancelable(false);
+    }
+
 
     @Override
     protected Boolean doInBackground(String... urls) {
@@ -51,7 +69,7 @@ public class VehicleAsynTask extends AsyncTask<String,Void,Boolean> {
                     vehicle.setDoorsNumber(object.getInt("Doors Number"));
                     vehicle.setSeatsNumber(object.getInt("Seats Number"));
 
-
+                    vehiclelist.add(vehicle);
 
                 }
                 return true;
@@ -67,7 +85,16 @@ public class VehicleAsynTask extends AsyncTask<String,Void,Boolean> {
 
 
     @Override
-    protected void onPostExecute(Boolean aBoolean) {
-        super.onPostExecute(aBoolean);
+    protected void onPostExecute(Boolean result) {
+        super.onPostExecute(result);
+        if (result == false){
+
+        }else {
+
+            VehicleAdapter adapter = new VehicleAdapter(vehiclelist.getApplicationContext(),R.layout.activity_vehicle_list,vehiclelist);
+            vehiclelist.setAdapter(adapter);
+        }
     }
+
+
 }

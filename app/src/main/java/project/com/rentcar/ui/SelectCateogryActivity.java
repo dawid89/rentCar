@@ -1,5 +1,6 @@
 package project.com.rentcar.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -11,11 +12,12 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import project.com.rentcar.R;
+import project.com.rentcar.core.asyncTask.VehicleAsynTask;
 import project.com.rentcar.core.listAdapter.VehicleAdapter;
 import project.com.rentcar.core.models.Vehicle;
 
 public class SelectCateogryActivity extends ActionBarActivity {
-    private Button luxButton,ecoButton,busButton,truButton,mapButton,aboutButton;
+    private Button luxButton, ecoButton, busButton, truButton, mapButton, aboutButton;
     ListView list;
     VehicleAdapter adapter;
     ArrayList<Vehicle> vehiclelist;
@@ -30,15 +32,18 @@ public class SelectCateogryActivity extends ActionBarActivity {
         truButton = (Button) findViewById(R.id.truckButton);
         mapButton = (Button) findViewById(R.id.mapButton);
         aboutButton = (Button) findViewById(R.id.aboutButton);
-        ListView list = (ListView) findViewById(R.id.list_lv);
+        final ListView list = (ListView) findViewById(R.id.list_lv);
         vehiclelist = new ArrayList<Vehicle>();
-      // "http://localhost:8080/RentCarServer/resources/luxury?limit=30&accessToken=1440831749586";
 
+        new VehicleAsynTask().execute("http://localhost:8080/RentCarServer/resources/luxury?limit=30&accessToken=1440831749586");
 
 
         luxButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(SelectCateogryActivity.this, VehicleAsynTask.class);
+                startActivity(i);
+
 
             }
         });
@@ -97,6 +102,17 @@ public class SelectCateogryActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void add(Vehicle vehicle) {
+    }
+
+    public void setAdapter(VehicleAdapter adapter) {
+        this.adapter = adapter;
+    }
+
+    public void get(int position) {
     }
 
 }
