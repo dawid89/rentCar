@@ -7,18 +7,18 @@ import android.view.MenuItem;
 
 import project.com.rentcar.R;
 
-public class VehicleListActivity extends ActionBarActivity {
+public class LuxCarListActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vehicle_list);
+        setContentView(R.layout.activity_lux_car_list);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_vehicle_list, menu);
+        getMenuInflater().inflate(R.menu.menu_lux_car_list, menu);
         return true;
     }
 

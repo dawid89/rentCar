@@ -1,5 +1,6 @@
 package project.com.rentcar.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -26,7 +27,8 @@ public class SelectCateogryActivity extends ActionBarActivity {
         luxButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(SelectCateogryActivity.this, LuxCarListActivity.class);
+                startActivity(i);
 
             }
         });

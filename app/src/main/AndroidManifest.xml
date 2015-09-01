@@ -23,8 +23,8 @@
             android:label="@string/title_activity_select_cateogry" >
         </activity>
         <activity
-            android:name=".ui.VehicleListActivity"
-            android:label="@string/title_activity_vehicle_list" >
+            android:name=".ui.LuxCarListActivity"
+            android:label="@string/title_activity_lux_car_list" >
         </activity>
     </application>
 
