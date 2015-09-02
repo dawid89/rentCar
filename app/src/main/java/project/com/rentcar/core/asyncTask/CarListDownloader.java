@@ -26,9 +26,9 @@ public class CarListDownloader extends AsyncTask<Integer, Void, ArrayList<Vehicl
 
     @Override
     protected ArrayList<Vehicle> doInBackground(Integer... params) {
-        String ordersJson = ctx.getString(R.string.LuxCarJson);
+        String LuxCarJson = ctx.getString(R.string.LuxCarJson);
         Gson gson = new Gson();
-        return gson.fromJson(ordersJson, new TypeToken<ArrayList<Vehicle>>() {
+        return gson.fromJson(LuxCarJson, new TypeToken<ArrayList<Vehicle>>() {
         }.getType());
     }
 

@@ -56,7 +56,7 @@ public class LuxCarListAdapter extends BaseAdapter {
         }
 
 
-        return null;
+        return convertView;
     }
 
     public class ViewHolder {
