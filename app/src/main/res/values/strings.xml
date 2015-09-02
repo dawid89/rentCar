@@ -2,11 +2,14 @@
 <resources>
 
     <string name="app_name">rentCar</string>
+    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_select_cateogry">SelectCateogryActivity</string>
+    <string name="title_activity_vehicle_list">VehicleListActivity</string>
     <string name="title_activity_lux_car">LuxCarActivity</string>
 
-    <string name="LuxCarJson">[
+    <string name="LuxCarJson">
+    [
     {
     "make":"Audi",
     "model":"A6",
@@ -92,7 +95,8 @@
     "doorNumber":"4",
     "seatsNumber":"5"
     }
-    ]</string>
+    ]
+    </string>
 
     <string name="title_activity_lux_car_list">LuxCarListActivity</string>
 
