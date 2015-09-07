@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">rentCar</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_select_cateogry">SelectCateogryActivity</string>
     <string name="title_activity_vehicle_list">VehicleListActivity</string>
@@ -11,90 +10,108 @@
     <string name="LuxCarJson">
     [
     {
-    "make":"Audi",
-    "model":"A6",
-    "vin":"2zy245x7t1t2sd",
-    "year":2015,
-    "registration":"LUB 22345",
-    "engine":{
-    "engineModel":"R4B3",
-    "fuelType":"Gas",
-    "capacity":1500,
-    "power":80
+    \"make\":\"Audi\",
+    \"model\":\"A6\",
+    \"vin\":\"2zy245x7t1t2sd\",
+    \"year\":\"2015\",
+    \"registration\":\"LUB 22345\",
+    \"engine\":{
+    \"engineModel\":\"R4B3\",
+    \"fuelType\":\"Gas\",
+    \"capacity\":\"1500\",
+    \"power\":\"80\"
     },
-    "imageUrl":"http://prettycarz.com/data_images/models/audi-a6/audi-a6-04.jpg",
-    "color":"Black",
-    "doorNumber":"4",
-    "seatsNumber":"5"
+    \"imageUrl\":\"http://prettycarz.com/data_images/models/audi-a6/audi-a6-04.jpg\",
+    \"color\":\"Black\",
+    \"doorNumber\":\"4\",
+    \"seatsNumber\":\"5\"
     },
-    {
-    "make":"BMW",
-    "model":"530",
-    "vin":"x3d536638dx359",
-    "year":2014,
-    "registration":"LUB 14545",
-    "engine":{
-    "engineModel":"RB28DETT",
-    "fuelType":"Petrol",
-    "capacity":2800,
-    "power":200
+         {
+    \"make\":\"BMW\",
+    \"model\":\"530\",
+    \"vin\":\"85628yz3t49874\",
+    \"year\":\"2014\",
+    \"registration\":\"LUB 14545\",
+    \"engine\":{
+    \"engineModel\":\"RB28DETT\",
+    \"fuelType\":\"Petrol\",
+    \"capacity\":\"2800\",
+    \"power\":\"200\"
     },
-    "imageUrl":"http://prettycarz.com/data_images/models/bmw-5/bmw-5-08.jpg",
-    "color":"Green",
-    "doorNumber":"4",
-    "seatsNumber":"5"
+    \"imageUrl\":\"http://prettycarz.com/data_images/models/bmw-5/bmw-5-08.jpg\",
+    \"color\":\"Black\",
+    \"doorNumber\":\"4\",
+    \"seatsNumber\":\"5\"
     },
-    {
-    "make":"Audi",
-    "model":"A6",
-    "vin":"44627x94s7798y",
-    "year":2015,
-    "registration":"LUB 22345",
-    "engine":{
-    "engineModel":"12DEZ",
-    "fuelType":"Diesel",
-    "capacity":1200,
-    "power":75
+        {
+    \"make\":\"Mercedes\",
+    \"model\":\"C200\",
+    \"vin\":\"2x54736d2833xs\",
+    \"year\":\"2011\",
+    \"registration\":\"LUB 12345\",
+    \"engine\":{
+    \"engineModel\":\"M62B44\",
+    \"fuelType\":\"Petrol\",
+    \"capacity\":\"4400\",
+    \"power\":\"320\"
     },
-    "imageUrl":"http://prettycarz.com/data_images/models/audi-a6/audi-a6-04.jpg",
-    "color":"Black",
-    "doorNumber":"4",
-    "seatsNumber":"5"
+    \"imageUrl\":\"http://prettycarz.com/data_images/reviews/mercedes-c200/mercedes-c200-04.jpg\",
+    \"color\":\"White\",
+    \"doorNumber\":\"4\",
+    \"seatsNumber\":\"5\"
+},
+           {
+    \"make\":\"Audi\",
+    \"model\":\"A6\",
+    \"vin\":\"2zy245x7t1t2sd\",
+    \"year\":\"2015\",
+    \"registration\":\"LUB 22345\",
+    \"engine\":{
+    \"engineModel\":\"R4B3\",
+    \"fuelType\":\"Gas\",
+    \"capacity\":\"1500\",
+    \"power\":\"80\"
     },
-    {
-    "make":"Audi",
-    "model":"A6",
-    "vin":"y948221733z255",
-    "year":2015,
-    "registration":"LUB 22345",
-    "engine":{
-    "engineModel":"R4B3",
-    "fuelType":"Gas",
-    "capacity":1500,
-    "power":80
+    \"imageUrl\":\"http://prettycarz.com/data_images/models/audi-a6/audi-a6-04.jpg\",
+    \"color\":\"Black\",
+    \"doorNumber\":\"4\",
+    \"seatsNumber\":\"5\"
     },
-    "imageUrl":"http://prettycarz.com/data_images/models/audi-a6/audi-a6-04.jpg",
-    "color":"Red",
-    "doorNumber":"4",
-    "seatsNumber":"5"
+         {
+    \"make\":\"BMW\",
+    \"model\":\"530\",
+    \"vin\":\"85628yz3t49874\",
+    \"year\":\"2014\",
+    \"registration\":\"LUB 14545\",
+    \"engine\":{
+    \"engineModel\":\"RB28DETT\",
+    \"fuelType\":\"Petrol\",
+    \"capacity\":\"2800\",
+    \"power\":\"200\"
     },
-    {
-    "make":"Mercedes",
-    "model":"E200",
-    "vin":"34ytzt544452z4",
-    "year":2012,
-    "registration":"LUB 12345",
-    "engine":{
-    "engineModel":"P45",
-    "fuelType":"Petrol",
-    "capacity":3000,
-    "power":199
+    \"imageUrl\":\"http://prettycarz.com/data_images/models/bmw-5/bmw-5-08.jpg\",
+    \"color\":\"Black\",
+    \"doorNumber\":\"4\",
+    \"seatsNumber\":\"5\"
     },
-    "imageUrl":"http://prettycarz.com/data_images/reviews/mercedes-c200/mercedes-c200-08.jpg",
-    "color":"White",
-    "doorNumber":"4",
-    "seatsNumber":"5"
-    }
+        {
+    \"make\":\"Mercedes\",
+    \"model\":\"C200\",
+    \"vin\":\"2x54736d2833xs\",
+    \"year\":\"2011\",
+    \"registration\":\"LUB 12345\",
+    \"engine\":{
+    \"engineModel\":\"M62B44\",
+    \"fuelType\":\"Petrol\",
+    \"capacity\":\"4400\",
+    \"power\":\"320\"
+    },
+    \"imageUrl\":\"http://prettycarz.com/data_images/reviews/mercedes-c200/mercedes-c200-04.jpg\",
+    \"color\":\"White\",
+    \"doorNumber\":\"4\",
+    \"seatsNumber\":\"5\"
+}
+
     ]
     </string>
 

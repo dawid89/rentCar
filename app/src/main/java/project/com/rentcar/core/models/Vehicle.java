@@ -5,19 +5,50 @@ public class Vehicle {
     private String make;
     private String model;
     private String color;
-    private int vin;
-    private int year;
-    private int registration;
-    private int doorsNumber;
-    private int seatsNumber;
+    private String vin;
+    private String year;
+    private String registration;
+    private String doorsNumber;
+    private String seatsNumber;
 
-
-    public Engine getEngine() {
-        return engine;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setEngine(Engine engine) {
-        this.engine = engine;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getSeatsNumber() {
+        return seatsNumber;
+    }
+
+    public void setSeatsNumber(String seatsNumber) {
+        this.seatsNumber = seatsNumber;
+    }
+
+    public String getDoorsNumber() {
+        return doorsNumber;
+    }
+
+    public void setDoorsNumber(String doorsNumber) {
+        this.doorsNumber = doorsNumber;
+    }
+
+    public String getRegistration() {
+        return registration;
+    }
+
+    public void setRegistration(String registration) {
+        this.registration = registration;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
     }
 
     public String getColor() {
@@ -28,29 +59,12 @@ public class Vehicle {
         this.color = color;
     }
 
-    public int getDoorsNumber() {
-        return doorsNumber;
+    public String getVin() {
+        return vin;
     }
 
-    public void setDoorsNumber(int doorsNumber) {
-        this.doorsNumber = doorsNumber;
-    }
-
-    public int getSeatsNumber() {
-        return seatsNumber;
-    }
-
-    public void setSeatsNumber(int seatsNumber) {
-        this.seatsNumber = seatsNumber;
-    }
-
-
-    public String getMake() {
-        return make;
-    }
-
-    public void setMake(String make) {
-        this.make = make;
+    public void setVin(String vin) {
+        this.vin = vin;
     }
 
     public String getModel() {
@@ -61,27 +75,25 @@ public class Vehicle {
         this.model = model;
     }
 
-    public int getVin() {
-        return vin;
+    public String getMake() {
+        return make;
     }
 
-    public void setVin(int vin) {
-        this.vin = vin;
+    public void setMake(String make) {
+        this.make = make;
     }
 
-    public int getYear() {
-        return year;
+    public Engine getEngine() {
+        return engine;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
-    public int getRegistration() {
-        return registration;
-    }
+    private String imageUrl;
 
-    public void setRegistration(int registration) {
-        this.registration = registration;
-    }
+
+
+
 }

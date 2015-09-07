@@ -13,27 +13,26 @@ import java.util.ArrayList;
 import project.com.rentcar.R;
 import project.com.rentcar.core.models.Vehicle;
 
+
 public class LuxCarListAdapter extends BaseAdapter {
-    private ArrayList<Vehicle> vehicles;
+    private ArrayList<Vehicle> vehicleslist;
     private LayoutInflater inflater;
-    private Context context;
+    private Context ctx;
 
-    public LuxCarListAdapter(Context context,ArrayList<Vehicle>vehicles){
-        this.vehicles = vehicles;
-        this.context = context;
-        inflater = LayoutInflater.from(this.context);
+    public LuxCarListAdapter(Context ctx, ArrayList<Vehicle> vehicleslist) {
+        this.vehicleslist = vehicleslist;
+        this.ctx = ctx;
+        inflater = LayoutInflater.from(ctx);
     }
-
-
 
     @Override
     public int getCount() {
-        return vehicles.size();
+        return vehicleslist.size();
     }
 
     @Override
-    public Object getItem(int position) {
-        return vehicles.get(position);
+    public Vehicle getItem(int position) {
+        return vehicleslist.get(position);
     }
 
     @Override
@@ -41,26 +40,30 @@ public class LuxCarListAdapter extends BaseAdapter {
         return 0;
     }
 
+
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
+        final Vehicle vehicle = vehicleslist.get(position);
         ViewHolder holder = null;
+
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.car_list_row, null);
             holder = new ViewHolder();
-            holder.car_tile_title_tv= (TextView)convertView.findViewById(R.id.car_tile_title_tv);
-            holder.car_tile_available_indicator_iv = (ImageView)convertView.findViewById(R.id.car_tile_available_indicator_iv);
+            holder.car_tile_title_tv = (TextView) convertView.findViewById(R.id.car_tile_title_tv);
+            holder.car_tile_available_indicator_iv = (ImageView) convertView.findViewById(R.id.car_tile_available_indicator_iv);
             convertView.setTag(holder);
         } else {
-            holder = (ViewHolder)convertView.getTag();
-
+            holder = (ViewHolder) convertView.getTag();
         }
-
-
+        holder.car_tile_title_tv.setText(vehicle.getMake());
         return convertView;
     }
 
-    public class ViewHolder {
-        TextView car_tile_title_tv;
-        ImageView car_tile_available_indicator_iv;
+        public class ViewHolder {
+            TextView car_tile_title_tv;
+            ImageView car_tile_available_indicator_iv;
     }
+
 }
+
+
