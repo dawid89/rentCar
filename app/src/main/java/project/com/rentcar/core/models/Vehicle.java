@@ -10,6 +10,15 @@ public class Vehicle {
     private String registration;
     private String doorsNumber;
     private String seatsNumber;
+    private String price;
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 
     public String getImageUrl() {
         return imageUrl;

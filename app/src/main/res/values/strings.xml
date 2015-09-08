@@ -12,6 +12,7 @@
     {
     \"make\":\"Audi\",
     \"model\":\"A6\",
+    \"price\":\"100$\",
     \"vin\":\"2zy245x7t1t2sd\",
     \"year\":\"2015\",
     \"registration\":\"LUB 22345\",
@@ -29,6 +30,7 @@
          {
     \"make\":\"BMW\",
     \"model\":\"530\",
+    \"price\":\"300$\",
     \"vin\":\"85628yz3t49874\",
     \"year\":\"2014\",
     \"registration\":\"LUB 14545\",
@@ -46,6 +48,7 @@
         {
     \"make\":\"Mercedes\",
     \"model\":\"C200\",
+    \"price\":\"150$\",
     \"vin\":\"2x54736d2833xs\",
     \"year\":\"2011\",
     \"registration\":\"LUB 12345\",
@@ -63,6 +66,7 @@
            {
     \"make\":\"Audi\",
     \"model\":\"A6\",
+    \"price\":\"100$\",
     \"vin\":\"2zy245x7t1t2sd\",
     \"year\":\"2015\",
     \"registration\":\"LUB 22345\",
@@ -80,6 +84,7 @@
          {
     \"make\":\"BMW\",
     \"model\":\"530\",
+    \"price\":\"200$\",
     \"vin\":\"85628yz3t49874\",
     \"year\":\"2014\",
     \"registration\":\"LUB 14545\",
@@ -97,6 +102,7 @@
         {
     \"make\":\"Mercedes\",
     \"model\":\"C200\",
+    \"price\":\"150$\",
     \"vin\":\"2x54736d2833xs\",
     \"year\":\"2011\",
     \"registration\":\"LUB 12345\",

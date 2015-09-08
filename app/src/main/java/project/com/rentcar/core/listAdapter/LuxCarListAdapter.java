@@ -55,7 +55,7 @@ public class LuxCarListAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.car_tile_title_tv.setText(vehicle.getMake());
+        holder.car_tile_title_tv.setText(vehicle.getMake()+"\n"+vehicle.getModel());
         return convertView;
     }
 
