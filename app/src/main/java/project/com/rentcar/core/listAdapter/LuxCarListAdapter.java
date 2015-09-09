@@ -42,7 +42,7 @@ public class LuxCarListAdapter extends BaseAdapter {
 
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView( int position, View convertView, ViewGroup parent) {
         final Vehicle vehicle = vehicleslist.get(position);
         ViewHolder holder = null;
 
@@ -50,17 +50,22 @@ public class LuxCarListAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.car_list_row, null);
             holder = new ViewHolder();
             holder.car_tile_title_tv = (TextView) convertView.findViewById(R.id.car_tile_title_tv);
+            holder.car_price_tv = (TextView) convertView.findViewById(R.id.car_price_tv);
             holder.car_tile_available_indicator_iv = (ImageView) convertView.findViewById(R.id.car_tile_available_indicator_iv);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
         holder.car_tile_title_tv.setText(vehicle.getMake()+"\n"+vehicle.getModel());
+        holder.car_price_tv.setText(vehicle.getPrice());
         return convertView;
     }
 
-        public class ViewHolder {
-            TextView car_tile_title_tv;
+
+
+
+    public class ViewHolder {
+            TextView car_tile_title_tv,car_price_tv;
             ImageView car_tile_available_indicator_iv;
     }
 

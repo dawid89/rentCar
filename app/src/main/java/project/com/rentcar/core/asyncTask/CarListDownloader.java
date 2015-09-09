@@ -3,42 +3,87 @@ package project.com.rentcar.core.asyncTask;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
+import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
-import java.util.ArrayList;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 
-import project.com.rentcar.R;
-import project.com.rentcar.core.interfaces.Processed;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.List;
+
+import project.com.rentcar.core.listAdapter.LuxCarListAdapter;
 import project.com.rentcar.core.models.Vehicle;
 
-public class CarListDownloader extends AsyncTask<Integer, Void, ArrayList<Vehicle>> {
+public class CarListDownloader extends AsyncTask<String, Void, InputStream> {
 
-    private Processed processed;
-    private Context ctx;
+    String url = "http://192.168.0.2:8080/RentCarServer/resources/luxury?limit=30&accessToken=1441813653607";
+    Context ctx;
 
-    public CarListDownloader(Processed processed,Context ctx){
-        this.processed = processed;
+    public CarListDownloader(Context ctx, String url) {
         this.ctx = ctx;
+        this.url = url;
     }
 
 
-    @Override
-    protected ArrayList<Vehicle> doInBackground(Integer... params) {
-        String LuxCarJson = ctx.getString(R.string.LuxCarJson);
-        Gson gson = new Gson();
-        return gson.fromJson(LuxCarJson, new TypeToken<ArrayList<Vehicle>>() {
-        }.getType());
-    }
+    protected InputStream doInBackground(String... urls) {
 
-    @Override
-    protected void onPostExecute(ArrayList<Vehicle> vehicles) {
-        super.onPostExecute(vehicles);
-        if (vehicles == null || vehicles.size() == 0) {
-            processed.OnFail();
-        } else {
-            processed.OnSuccess(vehicles);
+        DefaultHttpClient client = new DefaultHttpClient();
+
+        HttpGet getRequest = new HttpGet(url);
+
+        try {
+
+            HttpResponse getResponse = client.execute(getRequest);
+            final int statusCode = getResponse.getStatusLine().getStatusCode();
+
+            if (statusCode != HttpStatus.SC_OK) {
+                Log.w(getClass().getSimpleName(), "Error " + statusCode + " for URL " + url);
+                return null;
+            }
+
+            HttpEntity getResponseEntity = getResponse.getEntity();
+            return getResponseEntity.getContent();
+
+        } catch (ClientProtocolException e) {
+            Log.e("Error: ", Log.getStackTraceString(e));
+        } catch (IOException e) {
+            Log.e("Error: ", Log.getStackTraceString(e));
+        } catch (IllegalStateException e) {
+            Log.e("Error: ", Log.getStackTraceString(e));
         }
+
+        return null;
+
+    }
+
+    private void feedGsonWithHTTP(InputStream source) {
+        try {
+            Gson gson = new Gson();
+            Reader reader = new InputStreamReader(source);
+             LuxCarListAdapter response = gson.fromJson(reader,
+             LuxCarListAdapter.class);
+             List<Vehicle> results = response.getView(url,ctx);
+             Vehicle vehicle = results.get(0);
+             String string = vehicle.getMake();
+        } catch (Exception e) {
+            Log.e("Error", Log.getStackTraceString(e));
+        }
+        Toast.makeText(ctx, "ok", Toast.LENGTH_LONG).show();
+
+    }
+
+    protected void onPostExecute(InputStream result) {
+        feedGsonWithHTTP(result);
     }
 }
