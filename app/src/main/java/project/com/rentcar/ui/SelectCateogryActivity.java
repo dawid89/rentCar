@@ -58,7 +58,8 @@ public class SelectCateogryActivity extends ActionBarActivity {
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(SelectCateogryActivity.this, MapActivity.class);
+                startActivity(i);
             }
         });
         aboutButton.setOnClickListener(new View.OnClickListener() {

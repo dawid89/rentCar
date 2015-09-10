@@ -1,4 +1,4 @@
-package project.com.rentcar.core.listAdapter;
+package project.com.rentcar.core.listAdapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

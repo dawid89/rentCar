@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="project.com.rentcar.ui.MapActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:background="#aaaaaa"
+        android:paddingBottom="10dp">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="3"
+        android:text="Nerest location:"
+        android:background="@drawable/custom_background"
+        android:layout_gravity="center_horizontal"
+        android:textSize="21sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="12"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="0px"
+            android:layout_height="match_parent"/>
+
+        <ListView
+            android:paddingTop="8dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/city_list_lv"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="6sp"/>
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="0px"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

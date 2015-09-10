@@ -4,10 +4,6 @@ package project.com.rentcar.core.asyncTask;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.view.ViewGroup;
-import android.widget.Toast;
-
-import com.google.gson.Gson;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -18,12 +14,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.util.List;
-
-import project.com.rentcar.core.listAdapter.LuxCarListAdapter;
-import project.com.rentcar.core.models.Vehicle;
 
 public class CarListDownloader extends AsyncTask<String, Void, InputStream> {
 
@@ -68,18 +58,18 @@ public class CarListDownloader extends AsyncTask<String, Void, InputStream> {
     }
 
     private void feedGsonWithHTTP(InputStream source) {
-        try {
-            Gson gson = new Gson();
-            Reader reader = new InputStreamReader(source);
-             LuxCarListAdapter response = gson.fromJson(reader,
-             LuxCarListAdapter.class);
-             List<Vehicle> results = response.getView(url,ctx);
-             Vehicle vehicle = results.get(0);
-             String string = vehicle.getMake();
-        } catch (Exception e) {
-            Log.e("Error", Log.getStackTraceString(e));
-        }
-        Toast.makeText(ctx, "ok", Toast.LENGTH_LONG).show();
+//        try {
+//            Gson gson = new Gson();
+//            Reader reader = new InputStreamReader(source);
+//             LuxCarListAdapter response = gson.fromJson(reader,
+//             LuxCarListAdapter.class);
+//             List<Vehicle> results = response.getView(url,ctx);
+//             Vehicle vehicle = results.get(0);
+//             String string = vehicle.getMake();
+//        } catch (Exception e) {
+//            Log.e("Error", Log.getStackTraceString(e));
+//        }
+//        Toast.makeText(ctx, "ok", Toast.LENGTH_LONG).show();
 
     }
 

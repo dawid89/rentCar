@@ -26,6 +26,10 @@
             android:name=".ui.LuxCarListActivity"
             android:label="@string/title_activity_lux_car_list" >
         </activity>
+        <activity
+            android:name=".ui.MapActivity"
+            android:label="@string/title_activity_map" >
+        </activity>
     </application>
 
 </manifest>

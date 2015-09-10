@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import project.com.rentcar.R;
 import project.com.rentcar.core.interfaces.Processed;
-import project.com.rentcar.core.listAdapter.LuxCarListAdapter;
+import project.com.rentcar.core.listAdapters.LuxCarListAdapter;
 import project.com.rentcar.core.models.Vehicle;
 
 public class LuxCarListActivity extends ActionBarActivity implements Processed {
