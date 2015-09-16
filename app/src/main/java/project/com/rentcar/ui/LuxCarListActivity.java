@@ -9,6 +9,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import project.com.rentcar.R;
+import project.com.rentcar.core.asyncTask.CarListDownloader;
 import project.com.rentcar.core.interfaces.Processed;
 import project.com.rentcar.core.listAdapters.LuxCarListAdapter;
 import project.com.rentcar.core.models.Vehicle;
@@ -26,7 +27,7 @@ public class LuxCarListActivity extends ActionBarActivity implements Processed {
         vehicleslist = new ArrayList<Vehicle>();
         luxCarListAdapter = new LuxCarListAdapter(this, vehicleslist);
         listView.setAdapter(luxCarListAdapter);
-        //new CarListDownloader(this, this).execute();
+        new CarListDownloader(this,"").execute();
     }
 
     @Override

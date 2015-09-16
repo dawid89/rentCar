@@ -3,77 +3,91 @@ package project.com.rentcar.core.asyncTask;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
 
-public class CarListDownloader extends AsyncTask<String, Void, InputStream> {
+import project.com.rentcar.core.models.Vehicle;
 
-    String url = "http://192.168.0.2:8080/RentCarServer/resources/luxury?limit=30&accessToken=1441813653607";
-    Context ctx;
+public class CarListDownloader extends AsyncTask<String, Void, String> {
+    private String parsedString = "";
+    private Context ctx;
 
-    public CarListDownloader(Context ctx, String url) {
+    public CarListDownloader(Context ctx, String parsedString) {
         this.ctx = ctx;
-        this.url = url;
+        this.parsedString = parsedString;
     }
 
 
-    protected InputStream doInBackground(String... urls) {
-
-        DefaultHttpClient client = new DefaultHttpClient();
-
-        HttpGet getRequest = new HttpGet(url);
+    protected String doInBackground(String... urls) {
 
         try {
 
-            HttpResponse getResponse = client.execute(getRequest);
-            final int statusCode = getResponse.getStatusLine().getStatusCode();
+            URL url = new URL("http://192.168.0.2:8080/RentCarServer/resources/luxury?limit=30&accessToken=1442419687320");
+            URLConnection conn = url.openConnection();
+            HttpURLConnection httpConn = (HttpURLConnection) conn;
+            httpConn.setAllowUserInteraction(false);
+            httpConn.setInstanceFollowRedirects(true);
+            httpConn.setRequestMethod("GET");
+            httpConn.connect();
 
-            if (statusCode != HttpStatus.SC_OK) {
-                Log.w(getClass().getSimpleName(), "Error " + statusCode + " for URL " + url);
-                return null;
-            }
+            Gson gson = new Gson();
+            Type vehicleType = new TypeToken<Vehicle>() {}.getType();
+            gson.fromJson(url, vehicleType);
 
-            HttpEntity getResponseEntity = getResponse.getEntity();
-            return getResponseEntity.getContent();
+            InputStream is = httpConn.getInputStream();
+            parsedString = convertinputStreamToString(is);
 
-        } catch (ClientProtocolException e) {
-            Log.e("Error: ", Log.getStackTraceString(e));
-        } catch (IOException e) {
-            Log.e("Error: ", Log.getStackTraceString(e));
-        } catch (IllegalStateException e) {
-            Log.e("Error: ", Log.getStackTraceString(e));
+
+
+            return convertinputStreamToString(is);
+        } catch (Exception e) {
+            e.printStackTrace();
+
         }
 
-        return null;
-
+        return "";
     }
 
-    private void feedGsonWithHTTP(InputStream source) {
-//        try {
-//            Gson gson = new Gson();
-//            Reader reader = new InputStreamReader(source);
-//             LuxCarListAdapter response = gson.fromJson(reader,
-//             LuxCarListAdapter.class);
-//             List<Vehicle> results = response.getView(url,ctx);
-//             Vehicle vehicle = results.get(0);
-//             String string = vehicle.getMake();
-//        } catch (Exception e) {
-//            Log.e("Error", Log.getStackTraceString(e));
-//        }
-//        Toast.makeText(ctx, "ok", Toast.LENGTH_LONG).show();
+    public static String convertinputStreamToString(InputStream ists) throws IOException {
+        if (ists != null) {
+            StringBuilder sb = new StringBuilder();
+            String line;
 
-    }
 
-    protected void onPostExecute(InputStream result) {
-        feedGsonWithHTTP(result);
+
+
+            try {
+                BufferedReader r1 = new BufferedReader(new InputStreamReader(
+                        ists, "UTF-8"));
+                while ((line = r1.readLine()) != null) {
+                    sb.append(line).append("\n");
+                }
+            } finally {
+                ists.close();
+            }
+
+            return sb.toString();
+        } else {
+
+
+          return "";
+        }
+        }
+
+
+
+    @Override
+    protected void onPostExecute(String s) {
+
     }
 }
