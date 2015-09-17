@@ -10,11 +10,11 @@ import java.util.ArrayList;
 
 import project.com.rentcar.R;
 import project.com.rentcar.core.asyncTask.CarListDownloader;
-import project.com.rentcar.core.interfaces.Processed;
+import project.com.rentcar.core.interfaces.ProcessedCarListDownloading;
 import project.com.rentcar.core.listAdapters.LuxCarListAdapter;
 import project.com.rentcar.core.models.Vehicle;
 
-public class LuxCarListActivity extends ActionBarActivity implements Processed {
+public class LuxCarListActivity extends ActionBarActivity implements ProcessedCarListDownloading {
 
     private ArrayList<Vehicle> vehicleslist;
     private LuxCarListAdapter luxCarListAdapter;
@@ -24,10 +24,10 @@ public class LuxCarListActivity extends ActionBarActivity implements Processed {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lux_car_list);
         ListView listView = (ListView) findViewById(R.id.carLux_lv);
-        vehicleslist = new ArrayList<Vehicle>();
+        vehicleslist = new ArrayList<Vehicle>( );
         luxCarListAdapter = new LuxCarListAdapter(this, vehicleslist);
         listView.setAdapter(luxCarListAdapter);
-        new CarListDownloader(this,"").execute();
+        new CarListDownloader(this,this).execute();
     }
 
     @Override
@@ -46,17 +46,15 @@ public class LuxCarListActivity extends ActionBarActivity implements Processed {
         return super.onOptionsItemSelected(item);
     }
 
+
     @Override
-    public void OnSuccess(ArrayList<Vehicle> vehicles) {
-        vehicleslist.addAll(vehicles);
+    public void onSucces(ArrayList<Vehicle> vehicleList) {
+        vehicleslist.addAll(vehicleslist);
         luxCarListAdapter.notifyDataSetChanged();
-
     }
 
     @Override
-    public void OnFail() {
+    public void onFail() {
 
     }
-
-
 }
