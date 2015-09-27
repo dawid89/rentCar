@@ -16,7 +16,7 @@ import project.com.rentcar.core.models.Vehicle;
 
 public class LuxCarListActivity extends ActionBarActivity implements ProcessedCarListDownloading {
 
-    private ArrayList<Vehicle> vehicleList;
+    private ArrayList<Vehicle> vehicleslist;
     private LuxCarListAdapter luxCarListAdapter;
 
     @Override
@@ -24,8 +24,8 @@ public class LuxCarListActivity extends ActionBarActivity implements ProcessedCa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lux_car_list);
         ListView listView = (ListView) findViewById(R.id.carLux_lv);
-        vehicleList = new ArrayList<Vehicle>( );
-        luxCarListAdapter = new LuxCarListAdapter(this, vehicleList);
+        vehicleslist = new ArrayList<Vehicle>();
+        luxCarListAdapter = new LuxCarListAdapter(this,vehicleslist);
         listView.setAdapter(luxCarListAdapter);
         new CarListDownloader(this,this).execute();
     }
@@ -49,7 +49,7 @@ public class LuxCarListActivity extends ActionBarActivity implements ProcessedCa
 
     @Override
     public void onSucces(ArrayList<Vehicle> vehicleList) {
-        vehicleList.addAll(vehicleList);
+        vehicleList.addAll(vehicleslist);
         luxCarListAdapter.notifyDataSetChanged();
     }
 

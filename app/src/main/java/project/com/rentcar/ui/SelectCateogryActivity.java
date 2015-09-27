@@ -12,7 +12,6 @@ import project.com.rentcar.R;
 
 public class SelectCateogryActivity extends ActionBarActivity {
     private Button luxButton, ecoButton, busButton, truButton, mapButton, aboutButton;
-    public String[] URLs = {"http://localhost:8080/RentCarServer/resources/luxury?limit=30&accessToken=1441813653607"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +64,8 @@ public class SelectCateogryActivity extends ActionBarActivity {
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(SelectCateogryActivity.this, AboutActivity.class);
+                startActivity(i);
             }
         });
 

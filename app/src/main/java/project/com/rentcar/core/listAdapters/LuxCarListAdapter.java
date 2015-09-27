@@ -15,35 +15,35 @@ import project.com.rentcar.core.models.Vehicle;
 
 
 public class LuxCarListAdapter extends BaseAdapter {
-    private ArrayList<Vehicle> vehicleList;
+    private ArrayList<Vehicle> vehicleslist;
     private LayoutInflater inflater;
     private Context ctx;
 
-    public LuxCarListAdapter(Context ctx, ArrayList<Vehicle> vehicleList) {
-        this.vehicleList = vehicleList;
+    public LuxCarListAdapter(Context ctx, ArrayList<Vehicle> vehicleslist) {
+        this.vehicleslist = vehicleslist;
         this.ctx = ctx;
         inflater = LayoutInflater.from(ctx);
     }
 
     @Override
     public int getCount() {
-        return vehicleList.size();
+        return vehicleslist.size();
     }
 
     @Override
     public Vehicle getItem(int position) {
-        return vehicleList.get(position);
+        return vehicleslist.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
 
     @Override
     public View getView( int position, View convertView, ViewGroup parent) {
-        final Vehicle vehicle = vehicleList.get(position);
+        final Vehicle vehicle = vehicleslist.get(position);
         ViewHolder holder = null;
 
         if (convertView == null) {
@@ -65,10 +65,8 @@ public class LuxCarListAdapter extends BaseAdapter {
 
 
     public class ViewHolder {
-            TextView car_tile_title_tv,car_price_tv;
-            ImageView car_tile_available_indicator_iv;
+        TextView car_tile_title_tv,car_price_tv;
+        ImageView car_tile_available_indicator_iv;
     }
 
 }
-
-

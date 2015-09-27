@@ -30,6 +30,10 @@
             android:name=".ui.MapActivity"
             android:label="@string/title_activity_map" >
         </activity>
+        <activity
+            android:name=".ui.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
     </application>
 
 </manifest>

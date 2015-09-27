@@ -120,5 +120,6 @@
     <string name="title_activity_lux_car_list">LuxCarListActivity</string>
     <string name="title_activity_map">MapActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_about">About</string>
 
 </resources>
