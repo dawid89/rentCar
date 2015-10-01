@@ -49,7 +49,7 @@ public class LuxCarListActivity extends ActionBarActivity implements ProcessedCa
 
     @Override
     public void onSucces(ArrayList<Vehicle> vehicleList) {
-        vehicleList.addAll(vehicleslist);
+        vehicleslist.addAll(vehicleList);
         luxCarListAdapter.notifyDataSetChanged();
     }
 

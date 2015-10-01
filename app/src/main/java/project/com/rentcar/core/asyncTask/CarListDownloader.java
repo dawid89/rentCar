@@ -29,7 +29,7 @@ public class CarListDownloader extends AsyncTask<String, Void, String> {
 
     protected String doInBackground(String... urls) {
 
-            String url = "http://192.168.0.2:8080/RentCarServer/resources/luxury?limit=30&accessToken=1443355183015";
+            String url = "http://192.168.0.2:8080/RentCarServer/resources/luxury?limit=30&accessToken=1443712531417";
 
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
