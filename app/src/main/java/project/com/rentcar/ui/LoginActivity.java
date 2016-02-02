@@ -16,6 +16,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import project.com.rentcar.R;
+import project.com.rentcar.core.asyncTask.LoginConnetor;
 import project.com.rentcar.core.interfaces.ProcessFinish;
 
 
@@ -27,6 +28,7 @@ public class LoginActivity extends ActionBarActivity  {
     private ProcessFinish processFinish;
     private Context context;
     private Activity act;
+
 
 
 
@@ -56,9 +58,9 @@ public class LoginActivity extends ActionBarActivity  {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                String login = username.getText().toString();
-//                String pass = md5(password.getText().toString());
-//                new LoginConnetor(processFinish).execute(login,pass);
+                String login = username.getText().toString();
+                String pass = md5(password.getText().toString());
+                new LoginConnetor(processFinish).execute(login,pass);
                 Intent i = new Intent(LoginActivity.this, SelectCateogryActivity.class);
                 startActivity(i);
 

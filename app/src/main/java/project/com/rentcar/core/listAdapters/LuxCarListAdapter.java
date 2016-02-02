@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import project.com.rentcar.R;
@@ -58,6 +60,9 @@ public class LuxCarListAdapter extends BaseAdapter {
         }
         holder.car_tile_title_tv.setText(vehicle.getMake()+"\n"+vehicle.getModel());
         holder.car_price_tv.setText(vehicle.getPrice());
+        Picasso.with(ctx).load(getItem(position).getImageUrl());
+
+
         return convertView;
     }
 

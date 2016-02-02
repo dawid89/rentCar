@@ -6,54 +6,42 @@ import android.os.AsyncTask;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
+import project.com.rentcar.R;
 import project.com.rentcar.core.interfaces.ProcessedCarListDownloading;
 import project.com.rentcar.core.models.Vehicle;
 
-public class CarListDownloader extends AsyncTask<String, Void, String> {
+public class CarListDownloader extends AsyncTask<Integer, Void, ArrayList<Vehicle>> {
     private String parsedString = "";
     private Context ctx;
     private ProcessedCarListDownloading processedCarListDownloading;
 
-    public CarListDownloader(Context ctx, ProcessedCarListDownloading processedCarListDownloading) {
-        this.ctx = ctx;
-        this.processedCarListDownloading = processedCarListDownloading;
-    }
 
+        public CarListDownloader(ProcessedCarListDownloading processedCarListDownloading, Context ctx) {
+            this.processedCarListDownloading = processedCarListDownloading;
+            this.ctx = ctx;
+        }
 
-    protected String doInBackground(String... urls) {
+        @Override
+        protected ArrayList<Vehicle> doInBackground(Integer... params) {
+            String listCarJson = ctx.getString(R.string.LuxCarJson);
+            Gson gson = new Gson();
+            return gson.fromJson(listCarJson, new TypeToken<ArrayList<Vehicle>>() {
+            }.getType());
+        }
 
-            String url = "http://192.168.0.2:8080/RentCarServer/resources/luxury?limit=30&accessToken=1443712531417";
+        @Override
+        protected void onPostExecute(ArrayList<Vehicle> vehicleList) {
 
-            OkHttpClient client = new OkHttpClient();
-            Request request = new Request.Builder()
-                    .url(url)
-                    .build();
-            Response responses = null;
+            super.onPostExecute(vehicleList);
+            if (vehicleList == null || vehicleList.size() == 0) {
+                processedCarListDownloading.onFail();
+            } else {
+                processedCarListDownloading.onSucces(vehicleList);
+                return;
 
-            try {
-                responses = client.newCall(request).execute();
-                return responses.body().string();
-            } catch (IOException e) {
-                e.printStackTrace();
             }
-            processedCarListDownloading.onFail();
-            return null;
+        }
     }
-
-
-    @Override
-    protected void onPostExecute(String json) {
-        
-        Gson gson = new Gson();
-        ArrayList<Vehicle> vehicleList = gson.fromJson(json,  new TypeToken<ArrayList<Vehicle>>() {}.getType());
-        processedCarListDownloading.onSucces(vehicleList);
-
-    }
-}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/pre-dexed/debug/classes-27bc649b193d1991ecae9a630b5af9a8c584b88e.jar" />
+    </item>
+    <item
+        jar="/home/esparco/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/pre-dexed/debug/gson-2.3.1-057331660aac768a50fa4a215a71f00fae04c6e3.jar" />
+    </item>
+    <item
+        jar="/home/esparco/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-6fc1a8d8cdcb052360b46448e4845f8341960e97.jar" />
+    </item>
+    <item
+        jar="/home/esparco/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0-7daf59939117abcbab2facc74bcb9169b52e6215.jar" />
+    </item>
+    <item
+        jar="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-457f07343b72f2fa6bedc06ef26d5099c6b29b82.jar" />
+    </item>
+    <item
+        jar="/home/esparco/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/pre-dexed/debug/okio-1.4.0-5b050ee68120aecc6b9ee77cab3e29bef1ff4878.jar" />
+    </item>
+    <item
+        jar="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/pre-dexed/debug/classes-42bdf6b21ceef3504944fdd5f32dac1bf990a566.jar" />
+    </item>
+    <item
+        jar="/home/esparco/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/esparco/AndroidStudioProjects/rentCar/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-b5c7b0d977a471ff436a436a6f5961a2e452ed69.jar" />
+    </item>
+
+</items>
